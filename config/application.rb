@@ -13,6 +13,7 @@ Bundler.require(*Rails.groups)
 
 module WindowsSampleApp
   class Application < Rails::Application
+    config.generators.template_engine = :slim
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
