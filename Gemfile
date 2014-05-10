@@ -10,8 +10,9 @@ group :development, :test do
 	require 'rbconfig'
 	gem 'wdm', '>=0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
   gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '~>3.0.0.beta1'
-  gem 'guard-rspec'
+  gem 'rspec', '~>3.0.0.beta2'
+  gem 'rspec-rails', '~>3.0.0.beta'
+  gem 'guard-rspec', '~>4.2.8'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
