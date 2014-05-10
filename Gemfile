@@ -3,11 +3,15 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.4'
+gem 'bootstrap-sass'
+gem 'sprockets', '2.11.0'
 
 group :development, :test do
+	require 'rbconfig'
+	gem 'wdm', '>=0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
   gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '2.13.1'
-  gem 'guard-rspec', '2.5.0'
+  gem 'rspec-rails', '~>3.0.0.beta1'
+  gem 'guard-rspec'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
@@ -15,7 +19,7 @@ end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '~>2.2.0'
   gem 'rb-notifu', '0.0.4'
 end
 
