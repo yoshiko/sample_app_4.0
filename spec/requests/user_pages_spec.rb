@@ -6,7 +6,7 @@ describe "UserPages" do
 	describe "signup page" do
 		before { visit signup_path }
 
-		it { is_expected_to.have_content('Sign up') }
-		it { is_expected_to.have_title(full_title('Sign up')) }
+		it { is_expected.to have_content('Sign up') }
+		it { is_expected.to have_title(full_title('Sign up')) }
   end
 end
